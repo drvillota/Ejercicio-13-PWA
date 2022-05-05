@@ -37,6 +37,7 @@ export const Gallery = () => {
           id: resp.id.toString(),
           name: resp.name,
           url: `${resp.thumbnail.path}.${resp.thumbnail.extension}`,
+          comics: resp.comics.available,
         };
       });
 
@@ -54,6 +55,7 @@ export const Gallery = () => {
               key={elm.id}
               name={elm.name}
               url={elm.url}
+              comics={elm.comics}
             ></Card>
           ))}
         </div>
